@@ -1,10 +1,11 @@
 from dataclasses import dataclass
+import requests
+
 from fastapi import status
 from flask import Flask
 
 
 app = Flask(__name__)
-
 
 @dataclass
 class ExamResults:
