@@ -19,7 +19,7 @@ cursor = conn.cursor()
 
 def initialize_driver():
     # Specify the path to the chromedriver executable
-    chrome_driver_binary = "/usr/bin/chromedriver"  # Adjust the path accordingly
+    chrome_driver_binary = "/usr/bin/chromedriver"  # Adjust the path according
 
     # Create a Service object with the specified executable path
     service = Service(chrome_driver_binary)
@@ -46,6 +46,9 @@ def create_results_table():
 def insert_result(index_number, data_dict):
     # Serialize the dictionary to a JSON string before inserting into the database
     data_str = json.dumps(data_dict, indent=4)
+    with open("results.json", "+w") as result_file:
+        json.dump(data_dict)
+        print("results added")
 
     # Insert the data into the results table
     cursor.execute('''
