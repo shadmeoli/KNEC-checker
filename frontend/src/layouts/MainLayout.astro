@@ -1,10 +1,6 @@
 ---
+import Navbar from "../component/Navbar.astro";
 const { title } = Astro.props;
-
-
-function App() {
-  console.log("Server started")
-}
 ---
 
 <html lang="en">
@@ -16,6 +12,7 @@ function App() {
     <title>{title}</title>
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>

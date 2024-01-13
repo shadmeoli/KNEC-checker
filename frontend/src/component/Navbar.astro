@@ -1,0 +1,18 @@
+---
+const locations = [
+  { name: "Home", location: "/" },
+  { name: "School", location: "/school" },
+  { name: "County", location: "/county" },
+  { name: "News", location: "/news" },
+];
+---
+
+<div class="w-screen h-10 flex flex-row items-center justify-center">
+  <div class="w-[50%] h-full flex flex-row items-center justify-between">
+    {
+      locations.map((nav_link) => {
+        <a class="text-black" href={nav_link.location} />;
+      })
+    }
+  </div>
+</div>
